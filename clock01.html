@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CLOCK</title>
+  <link rel="stylesheet" href="center_flex01.css">
+  <!-- <link rel="stylesheet" href="center_grid01.css"> -->
+</head>
+<body>
+  <div id="container">
+    <div id="time"></div>
+  </div>
+  <script>
+    const time = document.getElementById('time');
+    function getTime(){
+      let now = new Date();
+      time.innerHTML = now.toTimeString().substring(0,8);
+    }
+    setInterval(getTime, 1000);
+  </script>
+</body>
+</html>
