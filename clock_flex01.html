@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CLOCK_flex01</title>
+<style>
+  * {
+    margin : 0;
+  }
+  #container {
+    display : flex;
+    width   : 100vw;
+    height  : 100vh;
+    background-color: black;
+
+    justify-content: center;
+    align-items    : center;
+  }
+  #time {
+    color: white;
+    font-family: "HGPゴシックE";
+    font-weight: bold;
+    font-size: 18vw;
+  }
+</style>
+</head>
+<body>
+  <div id="container">
+    <div id="time"></div>
+  </div>
+  <script>
+    const time = document.getElementById('time');
+    function getTime(){
+      let now = new Date();
+      time.innerHTML = now.toTimeString().substring(0,8);
+    }
+    window.setInterval(getTime, 1000);
+  </script>
+</body>
+</html>
